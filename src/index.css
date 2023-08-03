@@ -18,3 +18,7 @@
 .md\:hidden > svg:hover {
   @apply cursor-pointer;
 }
+
+body {
+    background-color: #08192f;
+}

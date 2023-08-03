@@ -68,15 +68,15 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {showMobileMenu && (
         <div
-          className='fixed top-0 right-0 w-64 h-screen bg-[#08192f] flex flex-col justify-center items-center'
+          className='fixed top-0 right-0 w-64 h-screen bg-[#8f2953] flex flex-col justify-center items-center'
           onClick={hideMobileMenu} // Hide mobile menu on clicking outside the menu
         >
           <ul>
-            <li className='py-6 text-4xl'>Home</li>
-            <li className='py-6 text-4xl'>About</li>
-            <li className='py-6 text-4xl'>Skills</li>
-            <li className='py-6 text-4xl'>Work</li>
-            <li className='py-6 text-4xl'>Contact</li>
+            <li className='py-6 text-3xl'>Home</li>
+            <li className='py-6 text-3xl'>About</li>
+            <li className='py-6 text-3xl'>Skills</li>
+            <li className='py-6 text-3xl'>Work</li>
+            <li className='py-6 text-3xl'>Contact</li>
           </ul>
         </div>
       )}
