@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import {HiOutlineMail} from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../assets/logo.png';
 
 const Navbar = () => {
@@ -56,18 +58,17 @@ const Navbar = () => {
         <li>Contact</li>
       </ul>
 
-      {/* Social Icons */}
-      <div>
-        {/* Add your social icons here */}
-      </div>
-
       {/* Hamburger (Mobile View) */}
       <div
         className={`md:hidden flex items-center ${
           showMobileMenu ? 'z-10' : 'z-0'
-        } hover:text-teal-400`} // Apply the hover effect here
+        } hover:text-teal-400`}
       >
-        <FaBars onClick={toggleMobileMenu} />
+        {showMobileMenu ? (
+          <FaTimes onClick={toggleMobileMenu} />
+        ) : (
+          <FaBars onClick={toggleMobileMenu} />
+        )}
       </div>
 
       {/* Mobile Menu */}
@@ -77,14 +78,42 @@ const Navbar = () => {
           onClick={hideMobileMenu} // Hide mobile menu on clicking outside the menu
         >
           <ul>
-            <li className='hover:text-teal-400 py-6 text-3xl'>Home</li>
-            <li className='hover:text-teal-400 py-6 text-3xl'>About</li>
+            <li className='hover:text-red-500 py-6 text-3xl'>Home</li>
+            <li className='hover:text-tealCustom py-6 text-3xl'>About</li>
             <li className='hover:text-teal-400 py-6 text-3xl'>Skills</li>
             <li className='hover:text-teal-400 py-6 text-3xl'>Work</li>
             <li className='hover:text-teal-400 py-6 text-3xl'>Contact</li>
           </ul>
         </div>
       )}
+
+      {/* Social Icons */}
+      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+              LinkedIn <FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+              Github <FaGithub size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#69b6a5]'>
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+              Email <HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-custom-purple'>
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+              Resume <BsFillPersonLinesFill size={30} />
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+
     </div>
     
   );

@@ -7,8 +7,11 @@ module.exports = {
       fontFamily: {
         'Raleway': ['Raleway', 'sans-serif'],
       },
+      colors: {
+        'custom-purple': '#8f2953',
+        'tealCustom': 'bg-[#69b6a5]',
+      },
     },
   },
   plugins: [],
-}
-
+};
