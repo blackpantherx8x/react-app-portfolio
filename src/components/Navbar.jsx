@@ -9,6 +9,11 @@ const Navbar = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
+  const handleHover = () => {
+    const listItems = document.querySelectorAll('.mobile-nav-item');
+    listItems.forEach((item) => item.classList.toggle('mobile-nav-hover'));
+  };
+
   // Function to hide mobile menu when switching to desktop view
   const hideMobileMenu = () => {
     setShowMobileMenu(false);
@@ -60,7 +65,7 @@ const Navbar = () => {
       <div
         className={`md:hidden flex items-center ${
           showMobileMenu ? 'z-10' : 'z-0'
-        }`}
+        } hover:text-teal-400`} // Apply the hover effect here
       >
         <FaBars onClick={toggleMobileMenu} />
       </div>
@@ -72,15 +77,16 @@ const Navbar = () => {
           onClick={hideMobileMenu} // Hide mobile menu on clicking outside the menu
         >
           <ul>
-            <li className='py-6 text-3xl'>Home</li>
-            <li className='py-6 text-3xl'>About</li>
-            <li className='py-6 text-3xl'>Skills</li>
-            <li className='py-6 text-3xl'>Work</li>
-            <li className='py-6 text-3xl'>Contact</li>
+            <li className='hover:text-teal-400 py-6 text-3xl'>Home</li>
+            <li className='hover:text-teal-400 py-6 text-3xl'>About</li>
+            <li className='hover:text-teal-400 py-6 text-3xl'>Skills</li>
+            <li className='hover:text-teal-400 py-6 text-3xl'>Work</li>
+            <li className='hover:text-teal-400 py-6 text-3xl'>Contact</li>
           </ul>
         </div>
       )}
     </div>
+    
   );
 };
 

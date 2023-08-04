@@ -22,3 +22,14 @@
 body {
     background-color: #08192f;
 }
+
+.hover\:bg-red-500:hover {
+    @apply text-teal-400;
+  }
+
+  @layer components {
+    li:hover {
+        @apply hover:text-teal-400;
+    }
+
+}
