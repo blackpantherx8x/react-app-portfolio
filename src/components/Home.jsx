@@ -21,6 +21,7 @@ const Home = () => {
         <div>
           <button
             className='text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#69b6a5] hover:border-[#69b6a5]'
+            style={{ zIndex: 0 }}
             onMouseEnter={handleArrowHover}
             onMouseLeave={handleArrowHover}
           >

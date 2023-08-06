@@ -37,7 +37,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-pink-600 border-b-4 border-custom-purple'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-4 border-pink-600' style={{ zIndex: 100 }}>
       <div>
         <img src={Logo} alt="Logo" style={{ width: '60px' }} />
       </div>
@@ -48,11 +48,11 @@ const Navbar = () => {
           showMobileMenu ? 'opacity-0 pointer-events-none' : 'ml-auto'
         }`}
       >
-        <li className='hover:text-white'>Home</li>
-        <li className='hover:text-white'>About</li>
-        <li className='hover:text-white'>Skills</li>
-        <li className='hover:text-white'>Work</li>
-        <li className='hover:text-white'>Contact</li>
+        <li className='hover:text-white text-2xl'>Home</li>
+        <li className='hover:text-white text-2xl'>About</li>
+        <li className='hover:text-white text-2xl'>Skills</li>
+        <li className='hover:text-white text-2xl'>Work</li>
+        <li className='hover:text-white text-2xl'>Contact</li>
       </ul>
 
       {/* Hamburger (Mobile View) */}
