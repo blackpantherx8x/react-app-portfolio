@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
@@ -11,10 +11,7 @@ const Navbar = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
-  const handleHover = () => {
-    const listItems = document.querySelectorAll('.mobile-nav-item');
-    listItems.forEach((item) => item.classList.toggle('mobile-nav-hover'));
-  };
+
 
   // Function to hide mobile menu when switching to desktop view
   const hideMobileMenu = () => {
@@ -47,7 +44,7 @@ const Navbar = () => {
 
       {/* Menu (Desktop View) */}
       <ul
-        className={`hidden md:flex space-x-4 font-bold ${
+        className={`hidden md:flex space-x-4  ${
           showMobileMenu ? 'opacity-0 pointer-events-none' : 'ml-auto'
         }`}
       >
