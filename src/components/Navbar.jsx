@@ -51,11 +51,11 @@ const Navbar = () => {
           showMobileMenu ? 'opacity-0 pointer-events-none' : 'ml-auto'
         }`}
       >
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li className='hover:text-white'>Home</li>
+        <li className='hover:text-white'>About</li>
+        <li className='hover:text-white'>Skills</li>
+        <li className='hover:text-white'>Work</li>
+        <li className='hover:text-white'>Contact</li>
       </ul>
 
       {/* Hamburger (Mobile View) */}
