@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 
 const Navbar = () => {
@@ -40,14 +40,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-pink-600'>
       <div>
-        <img src={Logo} alt="Logo" style={{ width: '50px' }} />
+        <img src={Logo} alt="Logo" style={{ width: '60px' }} />
       </div>
 
       {/* Menu (Desktop View) */}
       <ul
-        className={`hidden md:flex space-x-4 ${
+        className={`hidden md:flex space-x-4 font-bold ${
           showMobileMenu ? 'opacity-0 pointer-events-none' : 'ml-auto'
         }`}
       >
@@ -59,11 +59,15 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger (Mobile View) */}
+
       <div
         className={`md:hidden flex items-center ${
           showMobileMenu ? 'z-10' : 'z-0'
-        } hover:text-teal-400`}
+        } text-tealCustom hover:text-pink-600`} // Apply the hover effect here
       >
+
+      
+        {/* Toggle between hamburger icon and X icon */}
         {showMobileMenu ? (
           <FaTimes onClick={toggleMobileMenu} />
         ) : (
@@ -74,15 +78,15 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {showMobileMenu && (
         <div
-          className='fixed top-0 right-0 w-64 h-screen bg-[#8f2953] flex flex-col justify-center items-center'
+          className='fixed top-0 right-0 w-64 h-screen bg-custom-purple flex flex-col justify-center items-center text-[#ffffff]'
           onClick={hideMobileMenu} // Hide mobile menu on clicking outside the menu
         >
           <ul>
-            <li className='hover:text-red-500 py-6 text-3xl'>Home</li>
+            <li className='hover:text-tealCustom py-6 text-3xl'>Home</li>
             <li className='hover:text-tealCustom py-6 text-3xl'>About</li>
-            <li className='hover:text-teal-400 py-6 text-3xl'>Skills</li>
-            <li className='hover:text-teal-400 py-6 text-3xl'>Work</li>
-            <li className='hover:text-teal-400 py-6 text-3xl'>Contact</li>
+            <li className='hover:text-tealCustom py-6 text-3xl'>Skills</li>
+            <li className='hover:text-tealCustom py-6 text-3xl'>Work</li>
+            <li className='hover:text-tealCustom py-6 text-3xl'>Contact</li>
           </ul>
         </div>
       )}
@@ -111,11 +115,10 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        
       </div>
 
     </div>
-    
+
   );
 };
 

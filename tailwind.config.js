@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         'custom-purple': '#8f2953',
-        'tealCustom': 'bg-[#69b6a5]',
+        'tealCustom': '#69b6a5',
       },
     },
   },

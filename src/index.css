@@ -20,9 +20,3 @@
 }
 
 
-  @layer components {
-    li:hover {
-        @apply hover:text-teal-400;
-    }
-
-}
