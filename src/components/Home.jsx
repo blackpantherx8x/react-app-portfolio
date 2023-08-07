@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-scroll'
 
 const Home = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -7,6 +8,8 @@ const Home = () => {
   const handleArrowHover = () => {
     setShowArrow(!showArrow);
   };
+
+  const isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
 
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f]'>
@@ -19,19 +22,22 @@ const Home = () => {
         </p>
 
         <div>
+
+        <Link to='work' smooth={true} duration={900} offset={isMobileView ? -100 : -200}>
           <button
             className='text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#69b6a5] hover:border-[#69b6a5]'
             style={{ zIndex: 0 }}
             onMouseEnter={handleArrowHover}
             onMouseLeave={handleArrowHover}
-          >
-            View Work
 
+          >   
+          View Work
             <span className={`duration-300 transform ${showArrow ? 'rotate-90' : 'rotate-0'}`}>
               <HiArrowNarrowRight className='ml-3' />
             </span>
 
           </button>
+          </Link>
         </div>
 
       </div>

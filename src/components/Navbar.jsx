@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -36,57 +37,36 @@ const Navbar = () => {
     };
   }, []);
 
+  const isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
+
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-4 border-pink-600' style={{ zIndex: 100 }}>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-2 border-pink-600' style={{ zIndex: 100 }}>
       <div>
-        <img src={Logo} alt="Logo" style={{ width: '60px' }} />
+      <Link to='home' smooth={true} duration={500}>
+        <img src={Logo} alt="Logo" className='w-10 md:w-10 min-w-[50px] cursor-pointer' />
+      </Link>
       </div>
 
-      {/* Menu (Desktop View) */}
-      <ul
-        className={`hidden md:flex space-x-4  ${
-          showMobileMenu ? 'opacity-0 pointer-events-none' : 'ml-auto'
-        }`}
-      >
-        <li className='hover:text-white text-2xl'>Home</li>
-        <li className='hover:text-white text-2xl'>About</li>
-        <li className='hover:text-white text-2xl'>Skills</li>
-        <li className='hover:text-white text-2xl'>Work</li>
-        <li className='hover:text-white text-2xl'>Contact</li>
-      </ul>
 
-      {/* Hamburger (Mobile View) */}
 
-      <div
-        className={`md:hidden flex items-center ${
-          showMobileMenu ? 'z-10' : 'z-0'
-        } text-tealCustom hover:text-pink-600`} // Apply the hover effect here
-      >
-
-      
-        {/* Toggle between hamburger icon and X icon */}
-        {showMobileMenu ? (
-          <FaTimes onClick={toggleMobileMenu} />
-        ) : (
-          <FaBars onClick={toggleMobileMenu} />
-        )}
-      </div>
-
-      {/* Mobile Menu */}
-      {showMobileMenu && (
-        <div
-          className='fixed top-0 right-0 w-64 h-screen bg-custom-purple flex flex-col justify-center items-center text-[#ffffff]'
-          onClick={hideMobileMenu} // Hide mobile menu on clicking outside the menu
-        >
-          <ul>
-            <li className='hover:text-tealCustom py-6 text-3xl'>Home</li>
-            <li className='hover:text-tealCustom py-6 text-3xl'>About</li>
-            <li className='hover:text-tealCustom py-6 text-3xl'>Skills</li>
-            <li className='hover:text-tealCustom py-6 text-3xl'>Work</li>
-            <li className='hover:text-tealCustom py-6 text-3xl'>Contact</li>
-          </ul>
-        </div>
-      )}
+      {/* Menu (Desktop and Mobile View) */}
+      <ul className='flex space-x-2 md:space-x-4 md:ml-auto'>
+  <li className='hover:text-white text-base md:text-2xl'>
+    <Link to='home' smooth={true} duration={500}>Home</Link>
+  </li>
+  <li className='hover:text-white text-base md:text-2xl'>          
+    <Link to='about' smooth={true} duration={500}>About</Link>
+  </li>   
+  <li className='hover:text-white text-base md:text-2xl'>          
+    <Link to='skills' smooth={true} duration={500} offset={isMobileView ? -100 : -200}>Skills</Link>
+  </li>        
+  <li className='hover:text-white text-base md:text-2xl'>
+    <Link to='work' smooth={true} duration={500} offset={isMobileView ? -120 : -200}>Work</Link>
+  </li>
+  <li className='hover:text-white text-base md:text-2xl'>
+    <Link to='contact' smooth={true} duration={500}>Contact</Link>
+  </li>
+</ul>
 
       {/* Social Icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>

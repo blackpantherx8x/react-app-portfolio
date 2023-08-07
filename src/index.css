@@ -19,4 +19,13 @@
   @apply cursor-pointer;
 }
 
+input::-webkit-input-placeholder {
+    color: #EC407A;
+    font-weight: bold;
+/* Replace with your desired color value */
+}
 
+input {
+    font-weight: bold; /* Change to your desired font weight */
+    color: #333333;
+}
