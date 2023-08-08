@@ -19,13 +19,17 @@
   @apply cursor-pointer;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
     color: #EC407A;
+    /* Replace with your desired color value */
+
     font-weight: bold;
-/* Replace with your desired color value */
+    /* Apply font weight only to textarea placeholders */
 }
 
 input {
-    font-weight: bold; /* Change to your desired font weight */
+    font-weight: bold;
     color: #333333;
 }
+
