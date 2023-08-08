@@ -38,6 +38,11 @@ const Navbar = () => {
   }, []);
 
   const isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
+  const skillsMobileOffset = -100; // Offset for 'Skills' in mobile view
+  const skillsDesktopOffset = -100; // Offset for 'Skills' in desktop view
+  
+  const workMobileOffset = -100; // Offset for 'Work' in mobile view
+  const workDesktopOffset = -120; // Offset for 'Work' in desktop view
 
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-2 border-pink-600' style={{ zIndex: 100 }}>
@@ -58,10 +63,10 @@ const Navbar = () => {
     <Link to='about' smooth={true} duration={500}>About</Link>
   </li>   
   <li className='hover:text-white text-base md:text-2xl'>          
-    <Link to='skills' smooth={true} duration={500} offset={isMobileView ? -100 : -200}>Skills</Link>
+    <Link to='skills' smooth={true} duration={500} offset={isMobileView ? skillsMobileOffset : skillsDesktopOffset}>Skills</Link>
   </li>        
   <li className='hover:text-white text-base md:text-2xl'>
-    <Link to='work' smooth={true} duration={500} offset={isMobileView ? -120 : -200}>Work</Link>
+    <Link to='work' smooth={true} duration={500} offset={isMobileView ? workMobileOffset : workDesktopOffset}>Work</Link>
   </li>
   <li className='hover:text-white text-base md:text-2xl'>
     <Link to='contact' smooth={true} duration={500}>Contact</Link>
