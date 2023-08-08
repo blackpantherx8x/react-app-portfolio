@@ -18,7 +18,7 @@ const Skills = () => {
             </div>
 
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-            <div className='shadow-md shadow-[#040c16] bg-[#0a192f]' style={{ borderRadius: '8px' }}>
+                <div className='shadow-md shadow-[#040c16] bg-[#0a192f]' style={{ borderRadius: '8px' }}>
                     <img className='w-20 mx-auto hover:scale-110 duration-500 py-4' src={HTML} alt="HTML Icon"  />
                     <p className='my-4 font-bold'>HTML</p>
                 </div>
