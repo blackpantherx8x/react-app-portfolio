@@ -6,6 +6,7 @@ import ReactImg from '../assets/react.png';
 import Tailwind from '../assets/tailwind.png';
 import Github from '../assets/github.png';
 import Node from '../assets/node.png'
+import Mongo from '../assets/mongo.png'
 
 const Skills = () => {
   return (
@@ -45,6 +46,10 @@ const Skills = () => {
                 <div className='shadow-md shadow-[#040c16] bg-[#0a192f]' style={{ borderRadius: '8px' }}>
                     <img className='w-20 mx-auto hover:scale-110 duration-500 py-4' src={Node} alt="Node JS Icon" />
                     <p className='my-4 font-bold'>Node JS</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] bg-[#0a192f]' style={{ borderRadius: '8px' }}>
+                    <img className='w-20 mx-auto hover:scale-110 duration-500 py-4' src={Mongo} alt="Node JS Icon" />
+                    <p className='my-4 font-bold'>MongoDB</p>
                 </div>
             </div>
 
