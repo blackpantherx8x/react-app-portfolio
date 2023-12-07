@@ -1,4 +1,5 @@
 Hi my name is Alexander Weiss - I am a passionate Frontend Web Developer!
+
 This repository contains the codebase for my first basic React-based portfolio website (work in progress). 
 
 The website was built with the help of a tutorial by Clinty Briley (fireclint).
