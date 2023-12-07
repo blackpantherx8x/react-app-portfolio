@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import {FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setShowMobileMenu(!showMobileMenu);
-  };
+  const [setShowMobileMenu] = useState(false);
 
 
 
-  // Function to hide mobile menu when switching to desktop view
-  const hideMobileMenu = () => {
-    setShowMobileMenu(false);
-  };
 
   // Function to handle resizing of the window
   const handleResize = () => {
@@ -56,19 +48,19 @@ const Navbar = () => {
 
       {/* Menu (Desktop and Mobile View) */}
       <ul className='flex space-x-2 md:space-x-4 md:ml-auto'>
-  <li className='hover:text-white text-base md:text-2xl'>
+  <li className='hover:text-pink-600 text-base md:text-2xl'>
     <Link to='home' smooth={true} duration={500}>Home</Link>
   </li>
-  <li className='hover:text-white text-base md:text-2xl'>          
+  <li className='hover:text-pink-600 text-base md:text-2xl'>          
     <Link to='about' smooth={true} duration={500}>About</Link>
   </li>   
-  <li className='hover:text-white text-base md:text-2xl'>          
+  <li className='hover:text-pink-600 text-base md:text-2xl'>          
     <Link to='skills' smooth={true} duration={500} offset={isMobileView ? skillsMobileOffset : skillsDesktopOffset}>Skills</Link>
   </li>        
-  <li className='hover:text-white text-base md:text-2xl'>
+  <li className='hover:text-pink-600 text-base md:text-2xl'>
     <Link to='work' smooth={true} duration={500} offset={isMobileView ? workMobileOffset : workDesktopOffset}>Work</Link>
   </li>
-  <li className='hover:text-white text-base md:text-2xl'>
+  <li className='hover:text-pink-600 text-base md:text-2xl'>
     <Link to='contact' smooth={true} duration={500}>Contact</Link>
   </li>
 </ul>
@@ -82,12 +74,12 @@ const Navbar = () => {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="https://github.com/blackpantherx8x">
               Github <FaGithub size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#69b6a5]'>
-            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="/">
+            <a className='flex justify-between items-center w-full text-gray-300 font-bold' href="mailto:aweiss.webdev@gmail.com">
               Email <HiOutlineMail size={30} />
             </a>
           </li>
