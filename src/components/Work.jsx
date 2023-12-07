@@ -1,7 +1,5 @@
 import React from 'react'
-{/*import WorkImg from '../assets/workImg.jpg'*/}
-{/*import realEstate from '../assets/realestate.jpg'*/}
-{/*import weatherApp from '../assets/weatherApp.jpg'*/}
+
 
 const Work = () => {
   return (
@@ -9,7 +7,7 @@ const Work = () => {
       <div className='max-w-[1000px] mx-auto px-4 md:px-8 flex flex-col w-full h-full justify-start'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Work</p>
-          <p className='py-6'>\\ Check out some of my most recent work</p>
+          <p className='py-6'>\\ Soon you will see my projects here...Work in progress.</p>
         </div>
 
             <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
