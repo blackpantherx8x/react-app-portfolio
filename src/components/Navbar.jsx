@@ -48,19 +48,19 @@ const Navbar = () => {
 
       {/* Menu (Desktop and Mobile View) */}
       <ul className='flex space-x-2 md:space-x-4 md:ml-auto'>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-white text-base md:text-2xl'>
     <Link to='home' smooth={true} duration={500}>Home</Link>
   </li>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>          
+  <li className='hover:text-white text-base md:text-2xl'>          
     <Link to='about' smooth={true} duration={500}>About</Link>
   </li>   
-  <li className='hover:text-pink-600 text-base md:text-2xl'>          
+  <li className='hover:text-white text-base md:text-2xl'>          
     <Link to='skills' smooth={true} duration={500} offset={isMobileView ? skillsMobileOffset : skillsDesktopOffset}>Skills</Link>
   </li>        
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-white text-base md:text-2xl'>
     <Link to='work' smooth={true} duration={500} offset={isMobileView ? workMobileOffset : workDesktopOffset}>Work</Link>
   </li>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-white text-base md:text-2xl'>
     <Link to='contact' smooth={true} duration={500}>Contact</Link>
   </li>
 </ul>
