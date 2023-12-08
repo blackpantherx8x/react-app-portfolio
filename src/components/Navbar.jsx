@@ -6,7 +6,7 @@ import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
-  const [setShowMobileMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 
 
@@ -37,7 +37,7 @@ const Navbar = () => {
   const workDesktopOffset = -120; // Offset for 'Work' in desktop view
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-2 border-pink-600' style={{ zIndex: 100 }}>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-pink-600 border-b-2 border-pink-600' style={{ zIndex: 100 }}>
       <div>
       <Link to='home' smooth={true} duration={500}>
         <img src={Logo} alt="Logo" className='w-10 md:w-10 min-w-[50px] cursor-pointer' />
@@ -48,19 +48,19 @@ const Navbar = () => {
 
       {/* Menu (Desktop and Mobile View) */}
       <ul className='flex space-x-2 md:space-x-4 md:ml-auto'>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-gray-300 text-base md:text-2xl'>
     <Link to='home' smooth={true} duration={500}>Home</Link>
   </li>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>          
+  <li className='hover:text-gray-300 text-base md:text-2xl'>          
     <Link to='about' smooth={true} duration={500}>About</Link>
   </li>   
-  <li className='hover:text-pink-600 text-base md:text-2xl'>          
+  <li className='hover:text-gray-300 text-base md:text-2xl'>          
     <Link to='skills' smooth={true} duration={500} offset={isMobileView ? skillsMobileOffset : skillsDesktopOffset}>Skills</Link>
   </li>        
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-gray-300 text-base md:text-2xl'>
     <Link to='work' smooth={true} duration={500} offset={isMobileView ? workMobileOffset : workDesktopOffset}>Work</Link>
   </li>
-  <li className='hover:text-pink-600 text-base md:text-2xl'>
+  <li className='hover:text-gray-300 text-base md:text-2xl'>
     <Link to='contact' smooth={true} duration={500}>Contact</Link>
   </li>
 </ul>
